@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.0'
+}
+
+sourceCompatibility= 1.8
+
+mainClassName = "eu.lestard.snakefx.Launcher"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven{
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+
+dependencies {
+    compile "org.codehaus.jackson:jackson-mapper-asl:1.9.13"
+
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+
+    compile 'de.saxsys:mvvmfx:1.2.0'
+
+    compile 'eu.lestard:grid:0.2.0'
+
+    compile 'eu.lestard:easy-di:0.3.0'
+
+    compile 'eu.lestard:advanced-bindings:0.4.0'
+
+    compile 'eu.lestard:fx-zeug:0.1-SNAPSHOT'
+
+    // testing
+    testCompile "junit:junit:4.12"
+    testCompile "org.assertj:assertj-core:1.6.1"
+    testCompile "org.mockito:mockito-all:1.10.19"
+
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
