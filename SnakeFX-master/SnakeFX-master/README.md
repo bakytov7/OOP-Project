@@ -1,4 +1,4 @@
-# Snake Game using JavaFX
+# Snake Game in JavaFX
 This is a clone of the old mobile phone game "Snake".
 It was created as an example project to learn *JavaFX*.
 
